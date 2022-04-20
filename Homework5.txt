@@ -1,0 +1,82 @@
+//Homework 5
+
+Console.Write("姓名：");
+string name = Console.ReadLine();
+Console.Write("性別：");
+string gen = Console.ReadLine();
+Console.Write("出生年月日：");
+string bir = Console.ReadLine();
+Console.Write("學號：");
+string id = Console.ReadLine();
+
+Console.WriteLine();
+Console.WriteLine(name);
+Console.WriteLine(gen);
+Console.WriteLine(bir);
+Console.WriteLine(id);
+Console.WriteLine();
+
+int i = 1;
+do
+{
+    Console.WriteLine("正確請輸入 “1”；重新填寫「一次」請輸入“2”");
+    string k = Console.ReadLine();
+    if(k == "1")
+    {
+        Console.WriteLine("已完成資料建置");
+        i = i + 1;
+    }
+    else if(k == "2")
+    {
+        Console.WriteLine("重新輸入選項：");
+        Console.WriteLine("姓名/性別/出生年月日/學號/全部");
+        string chose = Console.ReadLine();
+        if(chose =="姓名")
+        {
+            Console.Write("姓名：");
+            name = Console.ReadLine();
+        }
+        else if(chose =="性別")
+        {
+            Console.Write("性別：");
+            gen = Console.ReadLine();
+        }
+        else if(chose=="出生年月日")
+        {
+            Console.Write("出生年月日：");
+            bir = Console.ReadLine();
+        }
+        else if(chose=="學號")
+        {
+            Console.Write("學號：");
+            id = Console.ReadLine();
+        }
+        else if(chose=="全部")
+        {
+            Console.Write("姓名：");
+            name = Console.ReadLine();
+            Console.Write("性別：");
+            gen = Console.ReadLine();
+            Console.Write("出生年月日：");
+            bir = Console.ReadLine();
+            Console.Write("學號：");
+            id = Console.ReadLine();
+        }
+        else
+        {
+            Console.WriteLine("Error");
+            i = i + 1;
+        }
+        Console.WriteLine();
+        Console.WriteLine(name);
+        Console.WriteLine(gen);
+        Console.WriteLine(bir);
+        Console.WriteLine(id);
+        Console.WriteLine();
+    }
+    else
+    {
+        Console.WriteLine("Error");
+        i = i + 1;
+    }
+}while(i < 2);
